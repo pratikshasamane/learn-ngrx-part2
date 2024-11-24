@@ -1,0 +1,63 @@
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 500px; 
+  }
+  
+  mat-card {
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px; 
+    background-color: #f9f9f9;
+  }
+  
+  mat-card-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  mat-form-field {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px; 
+  }
+  
+  textarea {
+    resize: none;
+    height: 100px; 
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  button[color="primary"] {
+    background-color: #1976d2; 
+    color: #fff;
+  }
+  
+  button[color="accent"] {
+    background-color: #f57c00;
+    color: #fff;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  

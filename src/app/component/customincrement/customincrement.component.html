@@ -1,0 +1,20 @@
+<!-- <p>customincrement works!</p> -->
+
+<mat-card>
+  <mat-card-content>
+    <h1>{{ channelname }}</h1>
+    <mat-form-field>
+      <mat-label>Input</mat-label>
+      <input matInput [(ngModel)]="counterInput" />
+    </mat-form-field>
+    <br />
+
+    <mat-select [(ngModel)]="actionType">
+      <mat-option value="add">Add</mat-option>
+      <mat-option value="substract">Substract</mat-option>
+    </mat-select>
+    <button mat-raised-button color="primary" (click)="onIncrement()">
+      Proceed
+    </button>
+  </mat-card-content>
+</mat-card>

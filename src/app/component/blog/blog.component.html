@@ -1,0 +1,26 @@
+<button
+  style="width: 10%; margin-left: 45%; margin-top: 2%; align-items: center"
+  mat-raised-button
+  class="main"
+  (click)="addblog()"
+  color="primary"
+>
+  Add Blog
+</button>
+
+<mat-card *ngFor="let item of bloglist">
+  <mat-card-header>
+    <h1>{{ item.title }}</h1>
+    <div style="text-align: right; width: 100%">
+      <button mat-raised-button (click)="editblog(item.id)" color="primary">
+        <mat-icon fontIcon="edit"></mat-icon>
+      </button>
+      <button mat-raised-button (click)="removeBlog(item.id)" color="primary">
+        <mat-icon fontIcon="delete"></mat-icon>
+      </button>
+    </div>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ item.description }}</p>
+  </mat-card-content>
+</mat-card>
