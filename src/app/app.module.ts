@@ -23,6 +23,9 @@ import { blogReducer } from './master/store/blog/blog.reducer';
 import { Appstate } from './master/store/global/app.state';
 import { addblog } from './master/store/blog/blog.actions';
 import { AddblogComponent } from './component/addblog/addblog.component';
+import { EffectsModule } from '@ngrx/effects';
+import { provideHttpClient } from '@angular/common/http';
+import { BlogEffects } from './master/store/blog/blog.effects';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,8 +48,9 @@ import { AddblogComponent } from './component/addblog/addblog.component';
     ReactiveFormsModule,
     StoreModule.forRoot(Appstate),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    EffectsModule.forRoot([BlogEffects]),
   ],
-  providers: [provideAnimationsAsync()],
+  providers: [provideAnimationsAsync(), provideHttpClient()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

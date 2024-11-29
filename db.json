@@ -1,0 +1,14 @@
+{
+  "Blogs": [
+    {
+      "id": "2",
+      "title": "React---1",
+      "description": "React is the library for web and native user interfaces. Build user interfaces out of individual pieces called components written in JavaScript."
+    },
+    {
+      "id": "3",
+      "title": "JavaScript",
+      "description": "JavaScript is the programming language of the Web. JavaScript is easy to learn. This tutorial will teach you JavaScript from basic to advanced."
+    }
+  ]
+}

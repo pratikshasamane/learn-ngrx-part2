@@ -5,7 +5,7 @@ import { getblogselector } from '../../master/store/blog/blog.selector';
 import { AppStateModel } from '../../master/store/global/appstate.model';
 import { AddblogComponent } from '../addblog/addblog.component';
 import { MatDialog } from '@angular/material/dialog';
-import { deleteblog } from '../../master/store/blog/blog.actions';
+import { deleteblog, loadblog } from '../../master/store/blog/blog.actions';
 
 @Component({
   selector: 'app-blog',
@@ -16,6 +16,7 @@ export class BlogComponent {
   constructor(private store: Store<AppStateModel>, private dialog: MatDialog) {}
   bloglist!: blogmodel[];
   ngOnInit(): void {
+    this.store.dispatch(loadblog());
     this.store.select(getblogselector).subscribe((data) => {
       this.bloglist = data;
 
